@@ -9,7 +9,7 @@ import (
 
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/mdp/qrterminal"
-	"github.com/joho/godotenv"
+	_ "github.com/joho/godotenv/autoload"
 
 	"bytes"
 	"encoding/json"
@@ -161,11 +161,6 @@ func GetEventHandler(client *whatsmeow.Client) func(interface{}) {
 }
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		fmt.Println("Error loading .env file")
-		return
-	}
 
 	dbLog := waLog.Stdout("Database", "DEBUG", true)
 	// Make sure you add appropriate DB connector imports, e.g. github.com/mattn/go-sqlite3 for SQLite as we did in this minimal working example
