@@ -3,6 +3,7 @@ module whatsmeow-quickstart
 go 1.22.2
 
 require (
+	github.com/joho/godotenv v1.5.1
 	github.com/mattn/go-sqlite3 v1.14.22
 	github.com/mdp/qrterminal v1.0.1
 	go.mau.fi/whatsmeow v0.0.0-20240327124018-350073db195c
